@@ -147,7 +147,7 @@
 
     function formatDate(s) {
       if (!s) return '';
-      const d = new Date(s.replace(' ', 'T') + 'Z');
+      const d = new Date(s);
       if (isNaN(d)) return s;
       return d.toLocaleString('th-TH', { dateStyle: 'medium', timeStyle: 'short' });
     }
